@@ -86,3 +86,8 @@ sort function
 
 # 15. how do manage logs of system that generate huge logs
 logrotate
+
+# 16. display active network connection
+netstat or ss
+
+# 17. check I/O connectivity - IOtop
