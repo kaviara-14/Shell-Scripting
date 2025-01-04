@@ -21,14 +21,12 @@ ps -ef | awk -F " "'{print $2}'
 curl <url> | grep ERROR
 
 # 4. write a shell script to print numbers divided by 3 & 5 and not 15
-
 #!/bin/bash
 
-for $i in {1..100};do
-(if['expr $i %3'==0] || if['expr $i % 5' ==0]) && if['expr $i % 15' != 0];
-then
-    echo $i
-fi;
+for i in {1..100};do
+if [[ ($((i % 3)) == 0 || $((i % 5)) == 0) && ($((i % 15)) != 0) ]] ; then
+  echo "number divisible by 3 and 5 and not divisble by 15 is  $i"
+fi
 done
 
 # 5. print even numbers
