@@ -192,3 +192,14 @@ for  i in {1,100}; do echo $1; done
  list=("orange" "apple" "bannana")
  list+=("juice")
  echo "fruits are ${list[@]}"
+
+41. length of the array
+
+  #!/bin/bash
+ set -x
+ set -o pipefile
+ list=("orange" "apple" "bannana")
+ list+=("juice")
+ echo "length is ${#list[@]}"
+
+ 42. for removing use unset command
