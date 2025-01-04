@@ -156,3 +156,19 @@ for  i in {1,100}; do echo $1; done
  for i in $list; do
   echo "fruits $i"
  done
+
+37. array
+ #!/bin/bash
+ 
+ set -x
+ set -o pipefail
+ 
+ list=("apple" "mango" "orange")
+ echo "${list[@]}"
+
+ 38. print the desired range 
+ #!/bin/bash
+set -x
+set -o pipefail
+list=("apple" "mango" "orange")
+echo "${list[@]:1:2}"
