@@ -183,3 +183,12 @@ for  i in {1,100}; do echo $1; done
  for fruit in "${list[@]}"; do
    echo "fruits are $fruit"
  done
+
+40. add a value in the array
+
+ #!/bin/bash
+ set -x
+ set -o pipefile
+ list=("orange" "apple" "bannana")
+ list+=("juice")
+ echo "fruits are ${list[@]}"
