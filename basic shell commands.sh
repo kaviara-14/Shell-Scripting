@@ -158,17 +158,28 @@ for  i in {1,100}; do echo $1; done
  done
 
 37. array
+  #!/bin/bash
+  
+  set -x
+  set -o pipefail
+  
+  list=("apple" "mango" "orange")
+  echo "${list[@]}"
+
+ 38. print the desired range 
+  #!/bin/bash
+ set -x
+ set -o pipefail
+ list=("apple" "mango" "orange")
+ echo "${list[@]:1:2}"
+
+39. iterate the array one by one
  #!/bin/bash
  
  set -x
- set -o pipefail
+ set -o pipefile
  
- list=("apple" "mango" "orange")
- echo "${list[@]}"
-
- 38. print the desired range 
- #!/bin/bash
-set -x
-set -o pipefail
-list=("apple" "mango" "orange")
-echo "${list[@]:1:2}"
+ list=("orange" "apple" "bannana")
+ for fruit in "${list[@]}"; do
+   echo "fruits are $fruit"
+ done
