@@ -148,3 +148,11 @@ for  i in {1,100}; do echo $1; done
 # trapping the linux signals
 
 35. kill = kill the process
+
+36. Iterate a list
+ 
+ #!/bin/bash
+ list="apple banna orange"
+ for i in $list; do
+  echo "fruits $i"
+ done
