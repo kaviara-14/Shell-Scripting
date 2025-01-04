@@ -33,11 +33,13 @@ done
 
 #!/bin/bash
 
-for $i in {1..100};do 
-if['expr $i % 2'==0];
-then
-    echo $i 
-fi;
+set -x
+set -o pipefail
+
+for i in {1..100}; do
+if [ $((i % 2)) == 0 ] ; then
+  echo "even numbers $i"
+fi 
 done
 
 # 6. write a script to print number "S" in missiisssipi
