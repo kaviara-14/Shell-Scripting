@@ -70,7 +70,7 @@ rm -rf sample.sh
 19. Analyse node health 
 nproc command - print cpu
 free command - print memory
-top command - print the running processes in your machine
+top command - To check which processes are using the most CPU, you should use the top or ps command.
 df command - print all the disk space
 
 2o. debug mode = set -x
